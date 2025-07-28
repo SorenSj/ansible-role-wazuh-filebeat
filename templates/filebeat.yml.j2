@@ -20,8 +20,8 @@ output.elasticsearch:
 {% endfor %}
 
 {% if filebeat_security %}
-  username: {{ indexer_security_user }}
-  password: "{{ indexer_security_password }}"
+  username: {{ server_security_user }}
+  password: "{{ server_security_password }}"
   protocol: https
   ssl.certificate_authorities:
     - {{ filebeat_ssl_dir }}/root-ca.pem
